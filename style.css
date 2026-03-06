@@ -57,3 +57,16 @@ ul {
     list-style-type: square;
     padding: none;
 }
+
+#flyer-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: Open Sans, sans-serif;
+    color: #F4F6F8;
+    background-color: #1D3557;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-left: 150px;
+}
