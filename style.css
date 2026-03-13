@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
 
-.title{
-    font-size: 50px;
+.section-title{
+    font-size: 30px;
     font-family: Montserrat, sans-serif;
-    color:#F4F6F8;  
+    color:#F4F6F8;
+    align-items: center;
 }
 
 .paragraph{
     font-size: 20px;
     font-family: Open Sans, sans-serif;
-    color:#F4F6F8;  
+    color:#F4F6F8;
+    text-indent: 40px;
 }
 
 body{
