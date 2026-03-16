@@ -6,6 +6,7 @@
     font-family: Montserrat, sans-serif;
     color:white;
     align-items: center;
+    text-align: center;
 }
 
 .paragraph{
@@ -71,4 +72,23 @@ ul {
     text-decoration: none;
     transition: background-color 0.3s ease;
     margin-left: 150px;
+}
+
+
+.reflection-box{
+color:#F4F6F8;
+font-family: Open Sans, sans-serif;
+font-size:18px;
+padding:20px;
+margin:20px;
+}
+
+.reflection-box p:first-of-type::first-letter{
+font-size:32px;
+font-weight:bold;
+color:#F4F6F8;
+}
+
+.reflection-box p:nth-child(even){
+text-indent:30px;
 }
