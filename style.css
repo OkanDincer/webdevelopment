@@ -92,3 +92,16 @@ color:#F4F6F8;
 .reflection-box p:nth-child(even){
 text-indent:30px;
 }
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.video-container video {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
