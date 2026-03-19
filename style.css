@@ -114,3 +114,8 @@ text-indent:30px;
     width: 25%;
     border-radius: 50%;
 }
+
+#headshot:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
