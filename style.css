@@ -127,7 +127,6 @@ text-indent:30px;
     font-family: serif;
     color: black;
   }
-  header,
   img,
   a.button,
   video,
@@ -154,6 +153,7 @@ text-indent:30px;
     display: block;
   }
 }
+
 
 .video-container {
     display: flex;
