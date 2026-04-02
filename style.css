@@ -128,13 +128,13 @@ text-indent:30px;
     color: black;
   }
   header,
-  nav,
   img,
   a.button,
   video,
   figure,
   br,
-  h2.section-title {
+  h2.section-title,
+  ul.nav-list {
     display: none !important;
   }
   h1.title {
