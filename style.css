@@ -120,31 +120,35 @@ text-indent:30px;
 }
 
 @media print {
-  * {
-    display: none;
-  }
-  h2.section-title,
-  p.paragraph,
-  ul.paragraph,
-  footer p {
-    display: block;
-    color: black;
-    font-family: serif;
-  }
   body {
+    font-family: serif;
+    color: black;
     margin: 1in;
+  }
+  header,
+  nav,
+  img,
+  a.button,
+  video,
+  figure,
+  br {
+    display: none !important;
   }
   h2.section-title {
     font-size: 24px;
+    display: block;
   }
   p.paragraph {
     font-size: 12px;
+    display: block;
   }
   ul.paragraph {
     font-size: 12px;
+    display: block;
   }
   footer p {
     font-size: 12px;
+    display: block;
   }
 }
 
