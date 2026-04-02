@@ -119,6 +119,35 @@ color:#F4F6F8;
 text-indent:30px;
 }
 
+@media print {
+  * {
+    display: none;
+  }
+  h2.section-title,
+  p.paragraph,
+  ul.paragraph,
+  footer p {
+    display: block;
+    color: black;
+    font-family: serif;
+  }
+  body {
+    margin: 1in;
+  }
+  h2.section-title {
+    font-size: 24px;
+  }
+  p.paragraph {
+    font-size: 12px;
+  }
+  ul.paragraph {
+    font-size: 12px;
+  }
+  footer p {
+    font-size: 12px;
+  }
+}
+
 .video-container {
     display: flex;
     justify-content: center;
