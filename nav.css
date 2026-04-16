@@ -77,13 +77,19 @@ justify-content:center;
     }
     header {
         height: 80px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     .title {
         font-size: 24px;
+        margin: 5px 0;
     }
     .logo {
-        height: 30px;
+        height: 25px;
         width: auto;
+        margin-top: 5px;
     }
 }
 
