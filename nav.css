@@ -88,7 +88,9 @@ justify-content:center;
         flex-wrap: nowrap;
     }
     .logo {
-        display: none;
+        height: 30px;
+        width: auto;
+        order: 3;
     }
 }
 
