@@ -6,6 +6,13 @@ header {
     background-color: blue;
     height: 175px;
 }
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #F4F6F8;
+    cursor: pointer;
+    padding: 10px;
+}
 .logo {
     height: 50px;
     align-items: flex-start;
@@ -57,5 +64,18 @@ flex:1;
 display:flex;
 justify-content:center;
 }
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .dropdown {
+        display: none;
+    }
+}
+
 
 
