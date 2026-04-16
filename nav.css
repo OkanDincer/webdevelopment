@@ -75,6 +75,16 @@ justify-content:center;
     .dropdown {
         display: none;
     }
+    header {
+        height: 80px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .logo {
+        height: 30px;
+        width: auto;
+    }
 }
 
 
