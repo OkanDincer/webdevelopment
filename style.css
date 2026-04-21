@@ -267,3 +267,127 @@ text-indent:30px;
     border-radius: 10px;
 }
 
+#business-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    background-color: rgba(29, 53, 87, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.feature-article:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+}
+
+.feature-article:nth-child(even) .feature {
+    order: 2;
+}
+
+.feature-article:nth-child(even) figure {
+    order: 1;
+}
+
+.feature h3 {
+    font-size: 24px;
+    font-family: Montserrat, sans-serif;
+    color: #E63946;
+    margin-bottom: 15px;
+}
+
+.feature figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.feature figure img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.feature figure figcaption {
+    font-family: Open Sans, sans-serif;
+    color: #F4F6F8;
+    font-size: 14px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Mobile Responsive Media Query */
+@media (max-width: 768px) {
+    #business-main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .feature-article {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .feature-article:nth-child(even) .feature,
+    .feature-article:nth-child(even) figure {
+        order: initial;
+    }
+
+    .feature h3 {
+        font-size: 20px;
+    }
+
+    .feature .paragraph {
+        font-size: 16px;
+        text-indent: 20px;
+    }
+
+    .feature figure img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    #business-main {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .feature-article {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .feature h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .feature .paragraph {
+        font-size: 14px;
+        text-indent: 15px;
+        line-height: 1.6;
+    }
+
+    .feature figure img {
+        max-height: 250px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+}
+
