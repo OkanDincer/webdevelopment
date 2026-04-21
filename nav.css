@@ -68,6 +68,32 @@ justify-content:center;
 @media (max-width: 768px) {
     nav {
         display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: #0F1C2E;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+    }
+    nav.active {
+        display: flex;
+    }
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .nav-list li {
+        width: 100%;
+    }
+    .nav-list li a {
+        display: block;
+        padding: 15px;
+        font-size: 16px;
+        border-bottom: 1px solid #1D3557;
     }
     .hamburger {
         display: block;
@@ -86,6 +112,7 @@ justify-content:center;
         height: 80px;
         flex-direction: row;
         flex-wrap: nowrap;
+        position: relative;
     }
     .logo {
         height: auto;
