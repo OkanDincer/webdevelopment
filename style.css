@@ -269,64 +269,133 @@ text-indent:30px;
 
 #business-main {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    align-items: start;
+}
+
+.section-title {
+    grid-column: 1 / -1;
 }
 
 .feature-article {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
     background-color: rgba(29, 53, 87, 0.3);
-    padding: 30px;
+    padding: 25px;
     border-radius: 10px;
-}
-
-.feature-article:nth-child(even) {
-    grid-template-columns: 1fr 1fr;
-}
-
-.feature-article:nth-child(even) .feature {
-    order: 2;
-}
-
-.feature-article:nth-child(even) figure {
-    order: 1;
-}
-
-.feature h3 {
-    font-size: 24px;
-    font-family: Montserrat, sans-serif;
-    color: #E63946;
-    margin-bottom: 15px;
-}
-
-.feature figure {
-    margin: 0;
-    padding: 0;
     text-align: center;
 }
 
-.feature figure img {
+.feature-article .feature {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feature-article figure {
+    margin: 0;
+    padding: 0;
+}
+
+.feature-article figure img {
     width: 100%;
     border-radius: 10px;
-    max-height: 400px;
+    max-height: 300px;
     object-fit: cover;
+}
+
+.feature h3 {
+    font-size: 22px;
+    font-family: Montserrat, sans-serif;
+    color: #E63946;
+    margin-bottom: 10px;
+    order: 1;
+}
+
+.feature .paragraph {
+    font-size: 16px;
+    text-indent: 0;
+    order: 2;
 }
 
 .feature figure figcaption {
     font-family: Open Sans, sans-serif;
     color: #F4F6F8;
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 13px;
+    margin-top: 8px;
+    font-style: italic;
+    order: 4;
+}
+
+
+.table-figure {
+    grid-column: 1 / -1;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    background-color: rgba(29, 53, 87, 0.3);
+    border-radius: 10px;
+}
+
+.table-figure figcaption {
+    font-size: 20px;
+    font-family: Montserrat, sans-serif;
+    color: #E63946;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #E63946;
+    font-family: Open Sans, sans-serif;
+    color: #F4F6F8;
+}
+
+.comparison-table thead {
+    background-color: #1D3557;
+}
+
+.comparison-table th {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #E63946;
+    font-weight: bold;
+}
+
+.comparison-table td {
+    padding: 12px 15px;
+    border: 1px solid #E63946;
+}
+
+.comparison-table tbody tr {
+    background-color: #0F1C2E;
+}
+
+.comparison-table tbody tr:hover {
+    background-color: rgba(230, 57, 70, 0.2);
+}
+
+.comparison-table tfoot {
+    background-color: #0F1C2E;
+}
+
+.comparison-table tfoot td {
+    padding: 12px 15px;
+    text-align: center;
+    color: #A9B6C7;
+    font-size: 12px;
     font-style: italic;
 }
 
-/* Mobile Responsive Media Query */
+
 @media (max-width: 768px) {
     #business-main {
         grid-template-columns: 1fr;
@@ -334,15 +403,14 @@ text-indent:30px;
         padding: 15px;
     }
 
-    .feature-article {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px;
+    .section-title {
+        grid-column: 1;
     }
 
-    .feature-article:nth-child(even) .feature,
-    .feature-article:nth-child(even) figure {
-        order: initial;
+    .feature-article {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
     }
 
     .feature h3 {
@@ -351,18 +419,43 @@ text-indent:30px;
 
     .feature .paragraph {
         font-size: 16px;
-        text-indent: 20px;
+        text-indent: 0;
     }
 
     .feature figure img {
-        max-height: 300px;
+        max-height: 250px;
+    }
+
+    .table-figure {
+        grid-column: 1;
+        padding: 15px;
+    }
+
+    .comparison-table {
+        font-size: 14px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .table-figure figcaption {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 600px) {
     #business-main {
+        grid-template-columns: 1fr;
         padding: 10px;
         gap: 15px;
+    }
+
+    .section-title {
+        grid-column: 1;
+        font-size: 22px;
     }
 
     .feature-article {
@@ -378,16 +471,40 @@ text-indent:30px;
 
     .feature .paragraph {
         font-size: 14px;
-        text-indent: 15px;
+        text-indent: 0;
         line-height: 1.6;
     }
 
     .feature figure img {
-        max-height: 250px;
+        max-height: 200px;
     }
 
-    .section-title {
-        font-size: 22px;
+    .table-figure {
+        grid-column: 1;
+        padding: 10px;
+        margin: 15px auto;
+    }
+
+    .table-figure figcaption {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .comparison-table {
+        font-size: 12px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .comparison-table th {
+        padding: 10px 8px;
     }
 }
 
